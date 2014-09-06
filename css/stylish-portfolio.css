@@ -13,10 +13,14 @@ body {
 }
 .img-circle {
   height: 200px;
-  position: center;
+  position: right;
 }
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.lead{
+    bottom: 0px;
 }
 
 .text-vertical-center {
@@ -35,6 +39,7 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
+    margin-left:20px;
     border-radius: 0;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
@@ -61,8 +66,9 @@ body {
 }
 
 /* Custom Horizontal Rule */
-h1,h3{
-    color: white;
+.headtitle{
+    color: #222D4F;
+    margin-left: 20px;
 }
 
 hr.small {
@@ -168,10 +174,19 @@ hr.small {
     -o-background-size: cover;
 }
 
+
 /* About */
 
 .about {
     padding: 50px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 /* Services */
@@ -232,7 +247,7 @@ hr.small {
     height: 500px;
 }
 .wdkt{
-    height: 500px;
+    height: 800px;
 }
 
 @media(max-width:768px) {

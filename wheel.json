@@ -1,6 +1,6 @@
 [
   {
-    "name": "Frontend",
+    "name": "Front end",
     "children": [
       {
         "name": "Javascript",
@@ -15,6 +15,14 @@
               {
                 "name": "Angular.js",
                 "colour": "#540E0C"
+              },
+              {
+                "name": "Highcharts.js",
+                "colour": "#540E0C"
+              },
+              {
+                "name": "D3.js",
+                "colour": "#540E0C"
               }
             ]
           }
@@ -24,7 +32,11 @@
         "name": "HTML",
         "children": [
           {
-            "name": "HTML5",
+            "name": "General HTML5",
+            "colour": "#3E0807"
+          },
+          {
+            "name": "HTML5 Media",
             "colour": "#3E0807"
           }
         ]
@@ -34,13 +46,7 @@
         "children": [
           {
             "name": "SASS",
-            "children": [
-              {
-                "name": "Koala",
-                "colour": "#3E0807"
-              
-              }
-            ]
+            "colour": "#27060A"
           },
           {
             "name": "Bootstrap",
@@ -53,6 +59,10 @@
   {
     "name": "Tools",
     "children": [
+    {
+        "name": "Koala",
+        "colour": "#1E16C7"
+      },
     {
         "name": "github",
         "colour": "#1E16C7"
@@ -79,7 +89,7 @@
         ]
       },
       {
-        "name": "sublime",
+        "name": "sublime text",
         "children": [
           {
             "name": "emmet",
@@ -101,24 +111,28 @@
         "colour": "#0B9A68"
       },
       {
+        "name": "Photoshop",
+        "colour": "#0B9A68"
+      },
+      {
         "name": "VS2013",
         "colour": "#14CD9B" 
 
       },
       {
-        "name": "phpMyadmin",
-        "colour": "#14CD9B"
+        "name": "php MyAdmin",
+        "colour": "#32B398"
       },
       {
         "name": "cPanel",
         "children": [
           {
-            "name": "CronJobs",
-            "colour": "#0B9A68"
+            "name": "Cron Jobs",
+            "colour": "#02CE43"
                       
           },
           {
-            "name": "server-config",
+            "name": "server config.",
             "colour": "#02CE43"
                       
           }
@@ -127,21 +141,21 @@
     ]
   },
   {
-    "name": "data",
+    "name": "Protocols",
     "children": [
       {
         "name": "REST/Json",
         "children": [
           {
             "name": "php",
-            "colour": "#990896"
+            "colour": "#CA0FC6"
           },
          {
             "name": "javascript",
             "colour": "#CA0FC6"
           },
           {
-            "name": "c#",
+            "name": "Http requests",
             "colour": "#FF17FA"
           }
         ]
@@ -149,22 +163,39 @@
       {
         "name": "SQL",
         "colour": "#B20CAF"
+       },
+      {
+        "name": "RegEx",
+        "colour": "#B20CAF"
        }
     ]
   },
   {
-    "name": "Backend",
+    "name": "Back end",
     "children": [
        {
           "name": "php",
-          "colour": "#FC992B"
+          "children": [
+            {
+              "name": "Simple-HTML DOM parser",
+              "colour": "#FCCD6A"
+              },
+              {
+              "name": "PHP QR-Code",
+              "colour": "#FCCD4A"
+              },
+              {
+              "name": "Securimage captcha",
+              "colour": "#FCCD4B"
+              }
+              ]
         },
        {
           "name": "SQL",
           "colour": "#FCCD4A"
         },
         {
-          "name": "RDB-management",
+          "name": "RDB management",
           "colour": "#FDF177"
         }
     ]

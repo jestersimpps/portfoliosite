@@ -1,18 +1,53 @@
 path {
-  stroke: #fff;
-  stroke-width: 1.5;
-  cursor: pointer;
+	stroke: #D0DDB9;
+	stroke-opacity:0.9 ;
+	stroke-width: 1.5;
+	cursor: pointer;
+	opacity: 0.7;
 }
 
 text {
-  font: 11px sans-serif;
-  cursor: pointer;
-}
-
-#vis{
-
+	font: 11px boldsans-serif;
+	cursor: pointer;
 	opacity: 1;
 }
-svg{
-	opacity: 0.7;
+path:hover {
+	opacity: 0.9;
+
 }
+text:hover {
+	path-opacity: 0.9;
+}
+#path-0{
+	opacity:0;
+}
+#vis{
+	position: relative;
+	opacity: 1;
+}
+
+
+@keyframes rotate {
+    from { transform:rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to   { -moz-transform: rotate(360deg);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg);}
+    to   { -webkit-transform: rotate(360deg);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(0deg);}
+    to   { -ms-transform: rotate(360deg);}
+}
+
+

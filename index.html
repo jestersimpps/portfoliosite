@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>Jo Vinkenroye</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/wheel.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
@@ -33,6 +33,9 @@
 </head>
 
 <body>
+ 
+
+
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -49,6 +52,9 @@
                 <a href="#about">About</a>
             </li>
             <li>
+                <a href="#history">Resume</a>
+            </li>
+            <li>
                 <a href="#services">Expertise</a>
             </li>
             <li>
@@ -61,18 +67,17 @@
     </nav>
 
     <!-- Header -->
-    <header id="header" class="header text-center"> 
+    <header id="top" class="header text-center"> 
         <div class="container">
-            <div class="row">
+            <div class="row loginfader">
                 <div class="col-sm-12 col-md-12 col-lg-12 text-left">
-                    <h1 class="headtitle">JO VINKENROYE</h1>
-                    <h4 class="headtitle">Commercial engineer - Automation specialist - Web Developer </h4>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                    <h1 class="headtitle">Jo Vinkenroye</h1>
+                    <h4 class="headtitle">Web Developer / Business Analyst</h4>
+                    <a href="#about" class="btn btn-dark btn-lg" onclick="ropeDemo.Initialize()">About me</a>
                 </div>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div id="vis" class="text-center">
-                    </div>
+                    <div id="vis" class="text-center"></div>
                 </div>
             </div>      
         </div>       
@@ -80,26 +85,45 @@
 
 
     <!-- About -->
-    <section id="about" class="about">
+    <section id="about" class="about" >
+
          <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3 col-lg-2 text-left">
-                    <img class="img-circle" src="img/profile.png" alt="">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                <canvas id="RopeDrawingArea"></canvas>
                 </div>
-                <div class="col-sm-6 col-md-1 col-lg-1 text-left">
-                </div>   
-                <div class="col-sm-6 col-md-8 col-lg-9 text-right">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vulputate aliquet tortor. Suspendisse justo justo, rutrum eu turpis in, vulputate laoreet urna. In lacus turpis, pharetra quis aliquet in, ultrices vitae erat. Duis porta euismod finibus. Donec pulvinar lacus justo, ut consequat purus convallis et. Quisque venenatis porta eros quis fringilla. Phasellus a interdum diam, auctor pellentesque dolor. Fusce tristique viverra diam. Proin ut ultrices lorem, nec hendrerit justo. Proin suscipit, ante sit amet tristique suscipit, neque turpis mattis velit, sed malesuada nisi velit nec odio. Etiam lorem est, molestie in ligula at, sollicitudin volutpat lorem.
+ 
+                <div class="col-sm-6 col-md-6 col-lg-6 text-right">
 
-Cras sed varius enim. Nullam eu elit id diam vehicula laoreet at eu arcu. Phasellus rutrum augue mi, a facilisis tellus iaculis eget. Ut a sapien est. Donec at justo nec leo dictum dictum. Nulla facilisi. Vivamus vitae turpis elit. Fusce eleifend tellus eu facilisis dictum. Aliquam eu tempor orci. Integer quis rutrum quam, eget imperdiet neque. Mauris luctus ultrices urna a fringilla. Vestibulum hendrerit mauris nibh. In tincidunt, quam at molestie mattis, nisl quam condimentum ligula, vel consectetur dolor quam a nulla.
+                    <img class="img-circle" src="img/profile.jpg" alt="">
+                    
+                    <div class="text-left">
+                    <h1>About me</h1>
+                    I finished my masters degree in commercial engineering writing a thesis about Enterprise Resource Planning (ERP) applications for Small/ Medium sized Enterprises (SME). While writing my thesis, I became more and more interested in coding and decided to eventually code the small ERP application myself. This was back in 2009-10. I had been developing in Visual basic for applications (VBA) before, but this was the first application I created using a real IDE (Visual Studio 2010 back then). Ever since, I have been hooked on coding. So, after a short career as a supply chain advisor in Pittsburgh, USA, I decided to throw my life around and get a job as a programmer. I started as a SAP ABAP programmer at Accenture, Amsterdam in 2013. Accenture sent me to Pune, India for 6 months. This was a wonderful experience, and connected me with some of the brightest coders. I didn't like ABAP that much as a coding language, so when I got back to the Netherlands, I made the switch to Microsoft Dynamics AX. X++ was interesting and got me into the curly-brace languages. I did DAX for about 6 months, but didn't really enjoy it either. It lacked the creative-artsy aspect. I quit my job at Accenture in May 2014 to spend more time on some personal projects, most of them in C#, javascript and php. Since then I have been immersed in the wonderful world of web development, studying and applying the scripting languages and frameworks.
 
-Proin fringilla nunc augue, in semper neque pellentesque eget. Sed scelerisque leo eros, vitae maximus metus convallis ac. Ut sollicitudin eu massa non rutrum. Donec tempor pharetra orci nec porta. Morbi hendrerit blandit urna. Suspendisse congue massa lorem, ac cursus odio ultricies a. Nullam vitae molestie enim, nec luctus metus. Donec hendrerit aliquet dictum. Donec ut mauris venenatis, pretium justo sit amet, volutpat purus. Fusce mollis ex mi, eu laoreet lacus hendrerit eget. Ut interdum arcu feugiat magna rhoncus blandit. Mauris eu massa magna. Nulla ac auctor risus. Aenean vitae odio sit amet orci viverra convallis in non ante. Suspendisse hendrerit, magna ut luctus consequat, lacus quam varius magna, vel euismod ligula mauris id lacus.
-
-Donec ultrices felis eget porttitor venenatis. Vestibulum vitae ipsum eget sem semper mollis. Cras non dictum nisl. Maecenas pharetra tempor nisl lacinia suscipit. Praesent mollis urna sed ipsum lobortis imperdiet. Donec finibus pharetra augue nec blandit. Integer sit amet eros non lacus condimentum maximus. Pellentesque tempus blandit scelerisque. Cras sit amet enim sed elit lacinia commodo. Duis et eros et lorem consequat commodo posuere non nunc. Quisque dignissim, ante ac consequat rutrum, purus justo dictum dui, sed gravida mi mauris quis tortor. Cras iaculis fermentum orci, in dictum felis. Pellentesque sollicitudin mauris eu elit molestie euismod.
+                        
+                     <p><a href="#history" class="btn btn-dark btn-lg">My resume</a></p>
+                    </div>
                 </div>
+
+                   
+                </div>    
+
             </div>
+            <div class="row">
+
+                 
+            </div>  
         </div>  
+        
+        <!--<img class="mbkb" src="img/kb.png" alt="">-->
     </section>
+
+
+    <section id="history" class="about">
+        
+    <div id="timeline"></div> 
+    </section> 
 
    
 
@@ -286,45 +310,18 @@ Donec ultrices felis eget porttitor venenatis. Vestibulum vitae ipsum eget sem s
             </div>
         </div>
     </footer>
-    <script src="js/d3.min.js"></script>
-    <script src="js/wheel.js"></script>
+
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/storyjs-embed.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/wheel.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/mousedrop.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
 
 </body>
 

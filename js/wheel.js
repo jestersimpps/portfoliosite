@@ -5,15 +5,14 @@ var width = window.innerHeight-200,
     x = d3.scale.linear().range([0, 2 * Math.PI]),
     y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, radius]),
     padding = 5,
-    duration = 1000;
+    duration = 500;
 
 var div = d3.select("#vis");
-
 
 var vis = div.append("svg")
     .attr("width", width + padding * 2)
     .attr("height", height + padding * 2)
-  .append("g")
+    .append("g")
     .attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
 
 var partition = d3.layout.partition()
@@ -41,7 +40,7 @@ d3.json("wheel.json", function(error, json) {
   var textEnter = text.enter().append("text")
       .style("fill-opacity", 1)
       .style("fill", function(d) {
-        return brightness(d3.rgb(colour(d))) < 125 ? "#eee" : "#000";
+        return brightness(d3.rgb(colour(d))) < 125 ? "#D2E8C1" : "#233151";
       })
       .attr("text-anchor", function(d) {
         return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
@@ -67,7 +66,6 @@ d3.json("wheel.json", function(error, json) {
       .duration(duration)
       .attrTween("d", arcTween(d));
 
-    // Somewhat of a hack as we rely on arcTween updating the scales.
     text.style("visibility", function(e) {
           return isParentOf(d, e) ? null : d3.select(this).style("visibility");
         })
@@ -105,17 +103,14 @@ function isParentOf(p, c) {
 
 function colour(d) {
   if (d.children) {
-    // There is a maximum of two children!
     var colours = d.children.map(colour),
         a = d3.hsl(colours[0]),
         b = d3.hsl(colours[1]);
-    // L*a*b* might be better here...
     return d3.hsl((a.h + b.h) / 2, a.s * 1.2, a.l / 1.2);
   }
   return d.colour || "#fff";
 }
 
-// Interpolate the scales!
 function arcTween(d) {
   var my = maxY(d),
       xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
@@ -130,8 +125,8 @@ function maxY(d) {
   return d.children ? Math.max.apply(Math, d.children.map(maxY)) : d.y + d.dy;
 }
 
-// http://www.w3.org/WAI/ER/WD-AERT/#color-contrast
 function brightness(rgb) {
   return rgb.r * .299 + rgb.g * .587 + rgb.b * .114;
 }
+
 

@@ -1,10 +1,44 @@
-/*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
-/* Global Styles */
+.loginfader{
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
 
 html,
 body {
@@ -14,6 +48,16 @@ body {
 .img-circle {
   height: 200px;
   position: right;
+  margin-top: 70px;
+}
+
+.mbkb{
+    height: 400px;
+    position: absolute;
+}
+.mouse{
+    position: absolute;
+    left:-1500px;
 }
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -22,7 +66,11 @@ body {
 .lead{
     bottom: 0px;
 }
-
+.RopeDrawingArea{
+position:fixed;
+      left:0;
+      top:0;
+}
 .text-vertical-center {
     display: table-cell;
     text-align: center;
@@ -39,7 +87,7 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
-    margin-left:20px;
+    margin-top: 20px;
     border-radius: 0;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
@@ -68,7 +116,6 @@ body {
 /* Custom Horizontal Rule */
 .headtitle{
     color: #222D4F;
-    margin-left: 20px;
 }
 
 hr.small {
@@ -183,6 +230,22 @@ hr.small {
     width: 100%;
     height: 100%;
     background-color: #fff;
+    opacity: 0.9;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* history */
+
+.history {
+    padding: 50px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

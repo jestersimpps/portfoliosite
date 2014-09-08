@@ -1,3 +1,4 @@
+  
    var physic = {
        ApplyUnitaryVerletIntegration: function (item, ellapsedTime, gravity, pixelsPerMeter) {
             item.x = 2 * item.x - item.old_x; 
@@ -14,7 +15,7 @@
                 item.y -= (dstFrom - targettedLength) * (dy / dstFrom) * 0.5;
             }
         }
-    }
+    };
 
     var mousedrop = {
 
@@ -34,6 +35,7 @@
         mouseimage: null,
         stopped: false
     },
+
 
     DrawOverride: function () { throw "Not implemented"; },
 
@@ -61,32 +63,31 @@
         clearInterval(mousedrop.data.intervalId);
     },
 
-    Initialize: function (canvasid, picture, cordlength) {
+    Initialize: function (canvasid, picture) {
 
         mousedrop.context.canvas = document.getElementById(canvasid);
 
-        mousedrop.context.canvas.width = document.getElementById(canvasid).width;
-        mousedrop.context.canvas.height = window.innerHeight;
-        mousedrop.context.size.w = document.getElementById(canvasid).width;
-        mousedrop.context.size.h = window.innerHeight;
+        mousedrop.context.canvas.width = 300;
+        mousedrop.context.canvas.height = windowheight;
+        mousedrop.context.size.w = 300;
+        mousedrop.context.size.h = windowheight;
         mousedrop.context.drawingContext = mousedrop.context.canvas.getContext("2d");
         mousedrop.context.center.x = mousedrop.context.size.w * 0.5;
         mousedrop.context.center.y = mousedrop.context.size.h * +0;
         mousedrop.context.mouseimage = new Image();
-        
+        mousedrop.context.mouseimage.src = picture; //'img/mousefall.jpg';
+
             mousedrop.context.mouseimage.onload = function(){
             mousedrop.Start();
             };
-            mousedrop.context.mouseimage.src = picture; //'img/mousefall.jpg';
-            mouseropelength = cordlength;
-    },
-};
+            
+    }
+}
 
-var mouseropelength = 500;
 mousedrop.rope = {
     items: [],
-    nbItems: 55,
-    length: +mouseropelength,
+    nbItems: 53,
+    length: +windowheight/2,
     relaxationIterations: +12,
     coeff:+1,
     state: false,

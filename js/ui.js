@@ -28,23 +28,24 @@ $(function() {
 
 
 var mousedropped = false;
-
+var windowheight = window.innerHeight;
+var windowwidth = window.innerWidth;
 $(window).scroll(function (event) {
 
     var scroll = $(window).scrollTop();
 
-    if (scroll < window.innerHeight*2){
-        $("#about").css("opacity",1/(window.innerHeight/scroll*1));
+    if (scroll < windowheight*2){
+        $("#about").css("opacity",1/(windowheight/scroll*1));
         $("#vis").css("top",scroll*0.5);
     }
-    if (scroll > window.innerHeight*0.1 && !mousedropped){
-        mousedrop.Initialize('mousedrop','img/mousefall.jpg',500);
+    if (scroll > windowheight*0.1 && !mousedropped){
+        mousedrop.Initialize('mousedrop','img/mousefall.jpg');
         mousedropped = true;
         }
-    if (scroll >= window.innerHeight*2){
-        $("#histroy").css("opacity",1/1-(window.innerHeight/(scroll/3)));
-        $("#vis").css("opacity",1/(window.innerHeight/(scroll*3)));
-        $("#vis").css("top",window.innerHeight +scroll*0.5);
+    if (scroll >= windowheight*2){
+        $("#histroy").css("opacity",1/1-(windowheight/(scroll/3)));
+        $("#vis").css("opacity",1/(windowheight/(scroll*3)));
+        $("#vis").css("top",windowheight +scroll*0.5);
      } 
 
 
@@ -71,10 +72,56 @@ $("svg").css("animation-timing-function","linear");
 
 }
 
+function setmobile()
+{
+    if ($(window).width()<768)
+    {
+        $("#about").css("height","200%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","270%");
+    }
+    else if ($(window).width()>=768 && $(window).width()<992)
+    {
+        $("#about").css("height","200%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","300%");
+    }
+    else
+    {
+        $("#about").css("height","100%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","100%");
+    }
+}
+
+window.onresize = function(event) {
+if ($(window).width()<768)
+    {
+        $("#about").css("height","200%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","270%");
+    }
+    else if ($(window).width()>=768 && $(window).width()<992)
+    {
+        $("#about").css("height","200%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","300%");
+    }
+    else
+    {
+        $("#about").css("height","100%"); 
+        $("#history").css("height","100%"); 
+        $("#portfolio").css("height","100%");
+    }
+}
+
+
+
 
 
 $(document).ready(function() {
     startturning();
+    setmobile();
     createStoryJS({
             type:       'timeline',
             width:      '100%',
@@ -86,6 +133,8 @@ $(document).ready(function() {
             source:     'https://docs.google.com/spreadsheet/pub?key=0Au9kzOr1lZvHdDgzb0s5SXRQZDV1OWF3NVhIcTlkeEE&output=html',
             embed_id:   'timeline'   
     });
+
+
 });
 
 

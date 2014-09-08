@@ -26,32 +26,39 @@ $(function() {
     });
 });
 
-
+//opacity and parallaxing
 var mousedropped = false;
 var windowheight = window.innerHeight;
 var windowwidth = window.innerWidth;
 $(window).scroll(function (event) {
 
     var scroll = $(window).scrollTop();
-
-    if (scroll < windowheight*2){
-        $("#about").css("opacity",1/(windowheight/scroll*1));
-        $("#vis").css("top",scroll*0.5);
+    
+    if (scroll < windowheight*3.5){
+        //$("#top").css("opacity",1-1/(windowheight/scroll*1));
+        $("#vis").css("opacity",visopacity(scroll));
+        $("#vis").css("top",scroll*0.8);
+        $("#bg").css("top",scroll*0.7);
     }
     if (scroll > windowheight*0.1 && !mousedropped){
         mousedrop.Initialize('mousedrop','img/mousefall.jpg');
         mousedropped = true;
         }
+        /*
     if (scroll >= windowheight*2){
-        $("#histroy").css("opacity",1/1-(windowheight/(scroll/3)));
-        $("#vis").css("opacity",1/(windowheight/(scroll*3)));
-        $("#vis").css("top",windowheight +scroll*0.5);
-     } 
-
-
-
+        //$("#histroy").css("opacity",1/1-(windowheight/(scroll/3)));
+        $("#vis").css("opacity",1);
+        $("#vis").css("top",-scroll*0.5);
+     } */
 });
 
+function visopacity(scroll){
+var op = 1-1/(windowheight/scroll*1);
+if (op<0.1){op=0.1;}
+return op;
+}
+
+//ever turning wheel
 function startturning(){
 
 $("svg").css("-webkit-animation","rotate 120s");
@@ -72,6 +79,7 @@ $("svg").css("animation-timing-function","linear");
 
 }
 
+//mobile browserwindows
 function setmobile()
 {
     if ($(window).width()<768)
@@ -115,10 +123,7 @@ if ($(window).width()<768)
     }
 }
 
-
-
-
-
+//timeline
 $(document).ready(function() {
     startturning();
     setmobile();

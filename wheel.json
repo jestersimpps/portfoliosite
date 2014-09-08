@@ -38,6 +38,10 @@
           {
             "name": "HTML5 Media",
             "colour": "#3E0807"
+          },
+          {
+            "name": "HTML5 Canvas",
+            "colour": "#3E0807"
           }
         ]
         },

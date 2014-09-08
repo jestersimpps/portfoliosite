@@ -27,14 +27,27 @@ $(function() {
 });
 
 
+var mousedropped = false;
 
-var windowheight = function(){ return $(window).height;}
 $(window).scroll(function (event) {
 
     var scroll = $(window).scrollTop();
 
-    $("#vis").css("top",scroll*0.69);
-    $(".mouse").css("left",scroll*0.2);
+    if (scroll < window.innerHeight*2){
+        $("#about").css("opacity",1/(window.innerHeight/scroll*1));
+        $("#vis").css("top",scroll*0.5);
+    }
+    if (scroll > window.innerHeight*0.1 && !mousedropped){
+        mousedrop.Initialize('mousedrop','img/mousefall.jpg',500);
+        mousedropped = true;
+        }
+    if (scroll >= window.innerHeight*2){
+        $("#histroy").css("opacity",1/1-(window.innerHeight/(scroll/3)));
+        $("#vis").css("opacity",1/(window.innerHeight/(scroll*3)));
+        $("#vis").css("top",window.innerHeight +scroll*0.5);
+     } 
+
+
 
 });
 

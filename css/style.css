@@ -51,14 +51,7 @@ body {
   margin-top: 70px;
 }
 
-.mbkb{
-    height: 400px;
-    position: absolute;
-}
-.mouse{
-    position: absolute;
-    left:-1500px;
-}
+
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -66,11 +59,7 @@ body {
 .lead{
     bottom: 0px;
 }
-.RopeDrawingArea{
-position:fixed;
-      left:0;
-      top:0;
-}
+
 .text-vertical-center {
     display: table-cell;
     text-align: center;
@@ -225,7 +214,7 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+
     position: relative;
     width: 100%;
     height: 100%;
@@ -240,46 +229,31 @@ hr.small {
 /* history */
 
 .history {
-    padding: 50px 0;
+
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    opacity: 0;
+    opacity: 0.9;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-/* Services */
-
-.services {
-    padding: 50px 0;
-}
-
-.service-item {
-    margin-bottom: 30px;
-}
-
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
 /* Portfolio */
 
 .portfolio {
-    padding: 50px 0;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: url(../img/bk1.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 .portfolio-item {
@@ -307,7 +281,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    height: 50%;
 }
 .wdkt{
     height: 800px;
@@ -323,4 +297,5 @@ hr.small {
 
 footer {
     padding: 100px 0;
+    height: 50%;
 }
